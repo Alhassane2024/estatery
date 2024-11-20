@@ -16,6 +16,7 @@
  --font-primary: "Plus Jakarta Sans", sans-serif;
 
     /* FONT SIZE  */
+ --fs-headline-large-tablet: 3.2rem; /*40*/
  --fs-headline-large: 2.2rem; /*40*/
  --fs-headline-medium: 2rem; /*32*/
  --fs-headline-small: 1.1rem; /*20*/
@@ -159,7 +160,7 @@ body { background-color: #fff;}
     animation: slide_in 500ms ease forwards;
     height: 72px;
     background-color: rgba(255, 255, 255, 0.8);
-    /* filter: blur(2px); */
+    backdrop-filter: blur(5px);
 }
 
 @keyframes slide_in {
@@ -206,7 +207,6 @@ body { background-color: #fff;}
    min-width: 260px;
    padding: 10px;
    border-radius: var(--radius-8);
-   /* box-shadow: var(--shadow-1); */
    visibility: hidden;
    opacity: 0;
    scale: 0.4;
@@ -479,6 +479,7 @@ form {
 .headline-property-listings-container {
    display: flex;
    flex-direction: column;
+   align-items: center;
    gap: 16px;
 }
 
@@ -556,7 +557,7 @@ form {
 .property-card {
    position: relative;
    flex: 0 0 auto; /* Empêche les cartes de se rétrécir */
-   width: 100%; /* Largeur fixe des cartes */
+   width: 90%; /* Largeur fixe des cartes */
    border: 1px solid #ddd;
    border-radius: 8px;
    text-align: center;
@@ -814,6 +815,7 @@ form {
 .copyrigth-container {
    display: flex;
    flex-direction: column;
+   align-items: center;
    gap: 16px;
    padding-inline: 24px;
    margin-top: 32px;
@@ -825,11 +827,139 @@ form {
    justify-content: space-around;
 }
 
-
 .social-icon {
   cursor: pointer;
 }
 
+.stats-none-on-mobile {
+   display: none;
+}
+
+                                    /* ------------------------------
+                                             #MEDIA QUERIES
+                                    --------------------------------*/
+/* Style pour les tablettes (601px à 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+   .headline-large {
+      font-size: var(--fs-headline-large-tablet);
+      font-weight: var(--fw-Bold);
+      line-height: var(--lh-hedaline-medium);
+      letter-spacing: var(--ls-one-percent);
+      text-align: center;
+   }
+
+   .hero-subtitle {
+      width: 70%;
+      text-align: center;
+   }
+
+   .rent-buy-sell-form,
+   .hero-stats,
+   .benefit-container,
+   .property-listings-container,
+   .cta-container,
+   .footer-container { padding-inline: 32px;}
+
+   .stats-none-on-mobile {
+      display: inline-block;
+   }
+
+   .illustration-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+   }
+
+   .four-benefit-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   }
+
+
+   .search-bar-and-tab-container {
+      flex-direction: column-reverse;
+   }
+
+   .property-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   }
+
+   .property-card {
+      width: 100%;
+   }
+
+   .scroll-controls {
+      display: none;
+   }
+
+   .headline-tenants-landlords-res {
+      width: 70%;
+      text-align: center;
+   }
+
+   .stats-tenants-landlords {
+      flex-direction: row;
+   }
+
+   .text-stats-container {
+      align-items: start;
+   }
+
+   .stats-tenants-landlords > hr {
+      transform: rotate(90deg);
+   }
+
+   .footer-link-container {
+      /* flex-direction: column; */
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      gap: 24px;
+      /* grid-template-rows: repeat(auto-fit, minmax(300px, 2fr)); */
+   }
+
+   .link-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 3fr));
+   }
+
+   .social-media-container {
+      width: 35%;
+   }
+
+   /* .btn-browse-more-properties {
+      width: auto;
+      align-self: center;
+   } */
+  
+   /* .navbar {
+      position: static;
+      display: flex;
+      scale: none;
+      visibility: visible;
+      opacity: 1;
+      transform-origin: center;
+   }
+
+   .navbar-list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   .navbar-wrapper {
+      display: flex;
+   }
+
+   .btn-link {
+      border-block-start: none;
+   } */
+
+   /* .nav-toggle-btn {
+      display: none;
+   } */
+}
 
 
 
