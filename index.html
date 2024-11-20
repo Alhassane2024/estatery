@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="./assets/favicon-estatery.svg" type="image/x-icon"> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="index.js" defer></script>
+
+    <title>Estatery</title>
+</head>
+<body>
+
+     <!-- -------------------------
+        #HEADER SECTION  
+    ------------------------------->
+    <header class="header active" data-header>
+
+        <div class="container">
+
+            <a href="#" class="logo">
+                <img src="./assets/logo-estatery.svg" alt="logo estatery" >
+            </a>
+
+            <nav class="navbar" data-navbar>
+
+                <ul class="navbar-list">
+                    <li>
+                        <a href="#" class="navbar-link link-style">Rent</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="navbar-link link-style">Buy</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="navbar-link link-style">Sell</a>
+                    </li>
+
+                    <li class="link-style-with-icon">
+                        <a href="#" class="navbar-link">Manage property</a>
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </li>
+
+                    <li class="link-style-with-icon">
+                        <a href="#" class="navbar-link">Ressources</a>
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </li>
+                </ul>
+
+                <div class="navbar-wrapper">
+                    <a href="#" class="btn-link label-medium">Login</a>
+
+                    <a href="#" class="btn btn-fill-login label-medium">Sign up</a>
+                 </div>
+            </nav>
+
+            <button class="nav-toggle-btn icon-btn" aria-label="toggle navbar" data-nav-toggler>
+                <ion-icon name="menu-outline"  class="ionic-icon-menu open" aria-hidden="true"></ion-icon>
+
+                <ion-icon name="close-outline" class="ionic-icon-menu close" aria-hidden="true"></ion-icon>
+
+            </button>
+        </div>
+
+       
+
+    </header>
+
+
+     <!-- -------------------------
+        #HERO SECTION  
+    ------------------------------->
+    <section class="hero">
+
+        <div class="container">
+
+            <h2 class="hero-title headline-large">Buy, rent, or sell your property easily</h2>
+
+            <h3 class="hero-subtitle headline-small">A great platform to buy, sell, or even rent your properties without any commisions.</h3>
+
+            <form action="#" class="rent-buy-sell-form">
+
+                <div class="form-container">
+
+                    <div class="label-header-container">
+                        <span class="tab-button active title-medium" data-tab="rent"> Rent</span>
+                        <span class="tab-button title-medium" data-tab="buy"> Buy</span>
+                        <span class="tab-button title-medium" data-tab="sell"> Sell</span>
+                    </div>
+
+                    <div  class="tab-content active" id="rent">
+                        
+                        <input type="text" name="rent" placeholder="Search location" class="search-item-field body-one-rem">
+
+                        <ion-icon class="icon-search" name="search-outline"></ion-icon>
+                    </div>
+
+                    <div  class="tab-content " id="buy">
+                        
+                        <input type="text" name="rent" placeholder="Search for buy" class="search-item-field body-one-rem">
+
+                        <ion-icon class="icon-search" name="search-outline"></ion-icon>
+                    </div>
+
+                    <div  class="tab-content " id="sell">
+                        
+                        <input type="text" name="rent" placeholder="Search for sell" class="search-item-field body-one-rem">
+
+                        <ion-icon class="icon-search" name="search-outline"></ion-icon>
+                    </div>
+
+                </div>
+            </form>
+
+            <div class="hero-stats">
+
+                <div class="stats-container">
+
+                    <img src="./assets/Icon-renters.png" alt="icon" width="64" height="64">
+                    
+                    <div class="stats-text-wrapper">
+                        <h3 class="stat-title body-one-rem">50k+ renters</h3>
+                        <p class="stat-desc">believe in our service</p>
+                    </div>
+
+                </div>
+
+                <div class="stats-container">
+
+                    <img src="./assets/Icon-search-properties.png" alt="icon" width="64" height="64">
+                    <div class="stats-text-wrapper">
+                        <h3 class="stat-title  body-one-rem"">10k+ properties</h3>
+                        <p class="stat-desc">ready for occupancy</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- -------------------------
+        #BENEFIT SECTION  
+    ------------------------------->
+     <section class="benefit">
+
+        <div class="benefit-container">
+
+            <div class="illustration-container">
+
+                <div class="header-text-benefit-and-btn">
+
+                    <div class="header-text-benefit">
+
+                        <h2 class="benefit-title headline-medium">The new way to find your new home</h2>
+                        <p class="benefit-subtitle body-one-rem">Find your dream place to live in with more than 10k+ properties listed.</p>
+                    </div>
+
+                    <a href="#" class="btn btn-fill label-medium">Browse Properties</a>
+
+                </div>
+
+                <div class="illustration-image-container">
+                    <img class="illustration-image" src="./assets/Illustration-image.png" alt="illsutration image" >
+                </div>
+
+                
+            </div>
+
+            <div class="four-benefit-container">
+
+                <div class="benefit-item">
+
+                    <img src="./assets/Icon-insurance.png" alt="">
+
+                    <div class="benefit-item-text">
+                        <h3 class="benefit-item-title title-large">Property Insurance</h3>
+                        <p class="body-one-rem">We offer our customer property protection of liability coverage and insurance for their better life.</p>
+                    </div>
+
+                </div>
+
+                <div class="benefit-item">
+
+                    <img src="./assets/Icon-best-price.png" alt="">
+
+                    <div class="benefit-item-text">
+                        <h3 class="benefit-item-title title-large">Best Price</h3>
+                        <p class="body-one-rem">Not sure what  you should be charging for your property? No need to worry, let us do the numbers for you.</p>
+                    </div>
+
+                </div>
+
+                <div class="benefit-item">
+
+                    <img src="./assets/Icon-lowest-comission.png" alt="">
+
+                    <div class="benefit-item-text">
+                        <h3 class="benefit-item-title title-large">Lowest Commission</h3>
+                        <p class="body-one-rem">You no longer have to negotiate commissions and haggle with other agents it only cost 2%!</p>
+                    </div>
+
+                </div>
+
+                <div class="benefit-item">
+
+                    <img src="./assets/Icon-overall-control.png" alt="">
+
+                    <div class="benefit-item-text">
+                        <h3 class="benefit-item-title title-large">Overall Control</h3>
+                        <p class="body-one-rem">Get a virtual tour, and schedule visits before you rent or buy any properties. You get overall control.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+     </section>
+
+
+      <!-- -------------------------
+        #PROPERTY LISTINGS SECTION  
+    ------------------------------->
+    <section class="property-listings">
+
+        <div class="property-listings-container">
+
+            <div class="headline-property-listings-container">
+
+                <h2 class="benefit-title property-listings-title headline-medium">Based on your location</h2>
+                
+                <p class="benefit-subtitle property-listings-subtitle body-one-rem">Some of our picked properties near you location.</p>
+
+            </div>
+
+            <div class="search-bar-and-tab-container">
+
+                <div class="search-container">
+
+                    <ion-icon class="icon-search property-listings" name="search-outline"></ion-icon>
+
+                    <input type="text" name="rent" placeholder="Search location" class="search-item-field body-one-rem">
+
+                </div>
+
+                <div class="form-container property-listings">
+
+                    <div class="property-listings label-header-container">
+
+                            <span class="property-listings tab-button active title-medium" data-tab="rent" >
+
+                                <img src="./assets/rent.svg" alt="" width="17" height="17">
+
+                                Rent</span>
+                        
+                            <span class="property-listings tab-button title-medium" data-tab="buy">
+
+                                <img src="./assets/buy.svg" alt="" width="17" height="17">
+
+                                Buy</span>
+                        
+                            <span class="property-listings tab-button title-medium" data-tab="sell" > 
+                                
+                                <img src="./assets/sell.svg" alt="" width="17" height="17">
+
+                                Sell</span>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="property-list-tab-icon-container">
+
+                <div class="property-list">
+    
+                    <div class="property-card">
+                      <img src="./assets/palm-harbor.png" alt="Property 1">
+    
+                      <div class="badge-property">
+                        <img src="./assets/awesome.svg" alt="awesome icon">
+                        <p class="badge-text">Popular</p>
+                      </div>
+    
+                      <div class="property-text-container">
+    
+                        <div class="price-and-favourite-icon-container">
+    
+                            <p class="property-price title-large">$2,095 / month</p>
+                            <ion-icon name="heart-outline"  class="heart-icon" aria-hidden="true" ></ion-icon>
+                        </div>
+      
+                        <div class="other-text-property">
+    
+                            <h2 class="title-large">Palm Harbor</h2>
+                            <p class="body-one-rem">Highland Lake, FL</p>
+                            <hr style="width: 100%;">
+      
+                            <div class="ameneties-container">
+    
+                            <div class="ameneties">
+                                <img src="./assets/Bed.svg" alt="">
+                                <p >3</p>
+                            </div>
+      
+                            <div class="ameneties">
+                                <img src="./assets/Bath.svg" alt="">
+                                <p>3</p>
+                            </div>
+      
+                            <div class="ameneties">
+                                <img src="./assets/Square Meters.svg" alt="">
+                                 <p >5x7m²</p>
+                             </div>
+                      </div>
+                        </div>
+    
+                      
+                      </div>
+                    </div>
+    
+                    <div class="property-card">
+                        <img src="./assets/beverly-springfield.png" alt="Property 2">
+      
+                        <div class="badge-property">
+                          <img src="./assets/awesome.svg" alt="awesome icon">
+                          <p class="badge-text">Popular</p>
+                        </div>
+      
+                        <div class="property-text-container">
+      
+                          <div class="price-and-favourite-icon-container">
+      
+                              <p class="property-price title-large">$2,700 / month</p>
+                              <ion-icon name="heart-outline"  class="heart-icon" aria-hidden="true" ></ion-icon>
+                          </div>
+        
+                          <div class="other-text-property">
+      
+                              <h2 class="title-large">Beverly Springfield</h2>
+                              <p class="body-one-rem">Palm Harbor, TX</p>
+                              <hr style="width: 100%;">
+        
+                              <div class="ameneties-container">
+      
+                              <div class="ameneties">
+                                  <img src="./assets/Bed.svg" alt="">
+                                  <p>3</p>
+                              </div>
+        
+                              <div class="ameneties">
+                                  <img src="./assets/Bath.svg" alt="">
+                                  <p>3</p>
+                              </div>
+        
+                              <div class="ameneties">
+                                  <img src="./assets/Square Meters.svg" alt="">
+                                   <p>5</p>
+                               </div>
+                        </div>
+                          </div>
+      
+                        
+                        </div>
+                      </div>
+    
+                    <div class="property-card">
+                        <img src="./assets/faulkner-ave.png" alt="Property 1">
+      
+                        <div class="badge-property">
+                          <img src="./assets/awesome.svg" alt="awesome icon">
+                          <p class="badge-text">Popular</p>
+                        </div>
+      
+                        <div class="property-text-container">
+      
+                          <div class="price-and-favourite-icon-container">
+      
+                              <p class="property-price title-large">$4,550 / month</p>
+                              <ion-icon name="heart-outline"  class="heart-icon" aria-hidden="true" ></ion-icon>
+                          </div>
+        
+                          <div class="other-text-property">
+      
+                              <h2 class="title-large">Faulkner Ave</h2>
+                              <p class="body-one-rem">Michigan, IN</p>
+                              <hr style="width: 100%;">
+        
+                              <div class="ameneties-container">
+      
+                              <div class="ameneties">
+                                  <img src="./assets/Bed.svg" alt="">
+                                  <p>3</p>
+                              </div>
+        
+                              <div class="ameneties">
+                                  <img src="./assets/Bath.svg" alt="">
+                                  <p>3</p>
+                              </div>
+        
+                              <div class="ameneties">
+                                  <img src="./assets/Square Meters.svg" alt="">
+                                   <p>5</p>
+                               </div>
+                        </div>
+                          </div>
+      
+                        
+                        </div>
+                    </div>
+    
+                  </div>
+                  
+                  <div class="scroll-controls">
+                    <ion-icon name="chevron-back-outline" class="icon-controls left" id="left"></ion-icon>
+                    <ion-icon name="chevron-forward-outline" class="icon-controls rigth" id="right"></ion-icon>
+                  </div>
+
+                  <a href="#" class="btn btn-fill label-medium">Browse more properties</a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- -------------------------
+    #FOR TENANTS & LANDLORDS SECTION  
+    ------------------------------->
+    <section class="property-listings">
+
+        <div class="tenants-landlords property-listings-container">
+
+            <div class="headline-property-listings-container">
+
+                <h2 class="benefit-title property-listings-title headline-medium" style="color: white;">We make it easy for <span class="span-tenants-landlords-style">tenants</span> and <span class="span-tenants-landlords-style">landlords.</span></h2>
+                
+                <p class="benefit-subtitle property-listings-subtitle body-one-rem" style="color: white;">Whether it’s selling your current home, getting financing, or buying a new home, we make it easy  and efficient. The best part? you’ll save a bunch of money and time with our services.</p>
+
+            </div>
+
+            <div class="card-tenants-landlords-container">
+
+                <div class="card virtual-home-tour">
+
+                    <img src="./assets/icon-virtual-home-tour.svg" alt="" width="56" height="56">
+
+                    <div class="text-card-tenants-landords-container">
+
+                        <h2 class="title-large" style="color: white;">Virtual home tour</h2>
+                        <p class="tenants-landlords-subtitle" style="color: rgba(255, 255, 255, 0.752); ">You can communicate directly with landlords and we provide you with virtual tour before you buy or rent the property.</p>
+                    </div>
+
+                </div>
+
+                <div class="card find-the-best-deal">
+
+                    <img src="./assets/icon-find-the-best-deal.svg" alt="" width="56" height="56">
+
+                    <div class="text-card-tenants-landords-container">
+
+                        <h2 class="title-large">Find the best deal</h2>
+                        <p class="tenants-landlords-subtitle">Browse thousands of properties, save your favorites and set up search alerts so you don’t miss the best home deal!</p>
+                    </div>
+
+                </div>
+
+                <div class="card get-ready-to-apply">
+
+                    <img src="./assets/icon-get-ready-to-apply.svg" alt="" width="56" height="56">
+
+                    <div class="text-card-tenants-landords-container">
+
+                        <h2 class="title-large" style="color: white;">Get ready to apply</h2>
+                        <p class="tenants-landlords-subtitle" style="color: rgba(255, 255, 255, 0.752); ">Find your dream house? You just need to do a little to no effort and you can start move in to your new dream home!</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <hr style="border-color: #312F4B;">
+
+            <div class="stats-tenants-landlords">
+
+                <div class="text-stats-container">
+
+                    <h1 class="headline-large">7.4%</h1>
+                    <p class="subtitle-stats body-one-rem">Property Return Rate</p>
+                </div>
+
+                <hr style="width: 64px;">
+
+                <div class="text-stats-container">
+
+                    <h1 class="headline-large">3,856</h1>
+                    <p class="subtitle-stats body-one-rem">Property in Sell & Rent</p>
+                </div>
+
+                <hr style="width: 64px;">
+
+                <div class="text-stats-container">
+
+                    <h1 class="headline-large">2,540</h1>
+                    <p class="subtitle-stats body-one-rem">Daily Completed Transactions</p>
+                </div>
+
+            </div>
+   
+        </div>
+    </section>
+
+
+    <!-- -------------------------
+        #CTA SECTION  
+    ------------------------------->
+    <section class="cta">
+
+        <div class="cta-container">
+
+            <div class="text-cta-header-container">
+
+                <h3 style="color: #7065F0;">No Spam Promise</h3>
+                <h2 class="benefit-title property-listings-title" style="font-size: 24px;">Are you a landlord?</h2>
+                <p class="benefit-subtitle property-listings-subtitle body-one-rem">Discover ways to increase your home's value and  get listed. No Spam.</p>
+            </div>
+            <div class="input-and-submit-button-container">
+
+                <input type="text" name="rent" placeholder="Enter your email address" class="cta-input search-item-field body-one-rem">
+                <a href="#" class="btn btn-fill-login label-medium" style="text-align: center;">Submit</a>
+                <p class="benefit-subtitle property-listings-subtitle body-one-rem">Join <span class="span-tenants-landlords-style">10,000+</span> other landlords in our estatery community.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- -------------------------
+        #FOOTER SECTION  
+    ------------------------------->
+    <section class="footer">
+
+        <div class="footer-container">
+
+            <img src="./assets/logo-estatery.svg" alt="logo-estatery">
+
+            <div class="footer-link-container">
+
+                <div class="left link-container">
+                    <div class="link-wrapper">
+                        <p class="link-title body-one-rem">SELL A HOME</p>
+                    <ul class="link-ul">
+                        <li>
+                            <a class="footer-link" href="#">Request an offer</a>
+                        </li>
+
+                        <li>
+                            <a class="footer-link" href="#">Pricing</a>
+                        </li>
+
+                        <li>
+                            <a class="footer-link" href="#">Reviews</a>
+                        </li>
+
+                        <li>
+                            <a class="footer-link" href="#">Stories</a>
+                        </li>
+                    </ul>
+                    </div>
+
+                    <div class="link-wrapper">
+                        <p class="link-title body-one-rem">BUY A HOME</p>
+                    <ul class="link-ul">
+                        <li>
+                            <a class="footer-link" href="#">Buy</a>
+                        </li>
+
+                        <li>
+                            <a class="footer-link" href="#">Finance</a>
+                        </li>
+                    </ul>
+                    </div>
+
+                    <div class="link-wrapper">
+                        <p class="link-title body-one-rem">BUY, RENT AND SELL</p>
+                    <ul class="link-ul">
+                        <li>
+                            <a class="footer-link" href="#">Buy & sell properties</a>
+                        </li>
+
+                        <li>
+                            <a class="footer-link" href="#">Rent home</a>
+                        </li>
+
+                        <li>
+                            <a class="footer-link" href="#">Builder trade-up</a>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+
+                <div class="rigth link-container">
+
+                    <div class="link-wrapper">
+                        <p class="link-title body-one-rem">TERMS & PRIVACY</p>
+                    <ul class="link-ul">
+                        <li>
+                            <a class="footer-link" href="#">Trust & Safety</a>
+                        </li>
+
+                        <li>
+                            <a class="footer-link" href="#">Terms of Service</a>
+                        </li>
+
+                        <li>
+                            <a class="footer-link" href="#">Privacy Policy</a>
+                        </li>
+                    </ul>
+                    </div>
+
+                    <div class="link-wrapper">
+                        <p class="link-title body-one-rem">ABOUT</p>
+                    <ul class="link-ul">
+                        <li>
+                            <a class="footer-link" href="#">Company</a>
+                        </li>
+
+                        <li>
+                            <a class="footer-link" href="#">How it works</a>
+                        </li>
+
+                        <li>
+                            <a class="footer-link" href="#">Contact</a>
+                        </li>
+
+                        <li>
+                            <a class="footer-link" href="#">Investors</a>
+                        </li>
+                    </ul>
+                    </div>
+
+                    <div class="link-wrapper">
+                        <p class="link-title body-one-rem">RESOURCES</p>
+                    <ul class="link-ul">
+                        <li>
+                            <a class="footer-link" href="#">Blog</a>
+                        </li>
+
+                        <li>
+                            <a class="footer-link" href="#">Guides</a>
+                        </li>
+
+                        <li>
+                            <a class="footer-link" href="#">FAQ</a>
+                        </li>
+
+                        <li>
+                            <a class="footer-link" href="#">Help Center</a>
+                        </li>
+                    </ul>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <hr style="border-color: #0009297e;">
+
+            <div class="copyrigth-container">
+
+                <p class="body-one-rem">©2024 Estatery. All rights reserved</p>
+                <div class="social-media-container">
+                    <ul class="social-media-ul">
+                        <li>
+                            <img class="social-icon" src="./assets/facebook-f 1.svg" alt="">
+                        </li>
+
+                        <li>
+                            <img class="social-icon" src="./assets/instagram 1.svg" alt="">
+                        </li>
+
+                        <li>
+                            <img class="social-icon" src="./assets/linkedin 1.svg" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
