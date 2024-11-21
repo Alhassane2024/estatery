@@ -16,7 +16,7 @@
  --font-primary: "Plus Jakarta Sans", sans-serif;
 
     /* FONT SIZE  */
- --fs-headline-large-tablet: 3.2rem; /*40*/
+ --fs-headline-large-tablet: clamp(3rem, 2.5vw, 3rem); /*40*/
  --fs-headline-large: 2.2rem; /*40*/
  --fs-headline-medium: 2rem; /*32*/
  --fs-headline-small: 1.1rem; /*20*/
@@ -45,6 +45,7 @@
 
     /* GRADIENT  */
  --gradient: linear-gradient(to top, #e0def700 0%, #E0DEF7 100%);
+ --gradient-right: linear-gradient(to top, #e0def700 0%, #E0DEF7 100%);
 
    /* SHADOW  */
  --shadow-1: 0px 2px 40px 0px #00000033;
@@ -558,7 +559,7 @@ form {
    position: relative;
    flex: 0 0 auto; /* Empêche les cartes de se rétrécir */
    width: 90%; /* Largeur fixe des cartes */
-   border: 1px solid #ddd;
+   border: 1px solid var(--neutral-60-stroke);
    border-radius: 8px;
    text-align: center;
    background-color: #fff;
@@ -659,7 +660,7 @@ form {
    display: flex;
    align-items: center;
    justify-content: center;
-   gap: 8px; 
+   gap: 20px; 
  }
 
  .icon-controls {
@@ -835,11 +836,69 @@ form {
    display: none;
 }
 
+.headline-hero-container {
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   gap: 32px;
+}
+
+.map-container {
+   display: none;
+}
+
+.hero-title,
+.hero-subtitle {
+text-align: center;
+/* width: 100% !important; */
+}
+
                                     /* ------------------------------
                                              #MEDIA QUERIES
                                     --------------------------------*/
 /* Style pour les tablettes (601px à 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1536px) {
+
+   .hero  {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+   }
+
+   #c {
+      padding-inline: 80px !important;
+   }
+
+   .hero-title,
+   .hero-subtitle {
+   text-align: start !important;
+   width: 100% !important;
+   }
+
+   .headline-hero-container {
+      padding-left: 150px;
+   }
+
+   .map-container {
+      display: flex;
+      align-items: start;
+      gap: 12px;
+      background-image: var(--gradient-right), url("./assets/map-hero.png");
+      
+     
+   }
+
+   .rigth-top-items-container {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding-bottom: 24px;
+   }
+
+   .rent-buy-sell-form {
+      order: 4;
+   }
+
+
 
    .headline-large {
       font-size: var(--fs-headline-large-tablet);
@@ -855,14 +914,21 @@ form {
    }
 
    .rent-buy-sell-form,
-   .hero-stats,
+   .hero-stats {
+      padding-left: 160px;
+   }
+
+   .benefit-container{
+      flex-direction: row;
+   }
+
    .benefit-container,
    .property-listings-container,
    .cta-container,
-   .footer-container { padding-inline: 32px;}
+   .footer-container { padding-inline: 160px;}
 
    .stats-none-on-mobile {
-      display: inline-block;
+      display: inline-flex;
    }
 
    .illustration-container {
@@ -916,7 +982,6 @@ form {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
       gap: 24px;
-      /* grid-template-rows: repeat(auto-fit, minmax(300px, 2fr)); */
    }
 
    .link-container {
@@ -928,18 +993,19 @@ form {
       width: 35%;
    }
 
-   /* .btn-browse-more-properties {
+   .btn-browse-more-properties {
       width: auto;
       align-self: center;
-   } */
+   }
   
-   /* .navbar {
+   .navbar {
       position: static;
       display: flex;
       scale: none;
       visibility: visible;
       opacity: 1;
       transform-origin: center;
+      background-color: transparent;
    }
 
    .navbar-list {
@@ -950,15 +1016,22 @@ form {
 
    .navbar-wrapper {
       display: flex;
+      
    }
 
    .btn-link {
       border-block-start: none;
-   } */
+   }
 
-   /* .nav-toggle-btn {
+   .nav-toggle-btn {
       display: none;
-   } */
+   }
+
+   .btn-fill-login {
+      min-width: auto;
+   }
+
+   
 }
 
 
