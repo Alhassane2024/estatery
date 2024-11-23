@@ -1,7 +1,9 @@
+
 import db from "../config/database.js";
 
 export const createProperty = (req, res)=>{
-    const { name, price, location } = req.body;
+    try {
+        const { name, price, location } = req.body;
     const imageUrl = req.file? `/uploads/${req.file.filename}` : "";
 
     const query = `INSERT INTO properties( name, price, location, image_url) VALUES(?, ?, ?, ?)`;
@@ -9,9 +11,12 @@ export const createProperty = (req, res)=>{
         if(err){
             res.status(500).json({ message: "ERREUR", error: err.message });
         }else{
-            res.status(200).json({ id: this.lastID, name, price, location, imageUrl})
+            res.status(200).json({ id: this.lastID, name, price, location, imageUrl});
         }
     })
+    } catch (error) {
+        console.error("Erreur non gérée : ", error);
+    }
 };
 
 export const getAllProperties = (req, res)=>{
@@ -71,3 +76,44 @@ export const deleteProperty = (req, res)=>{
         }
     })
 }
+
+
+
+export const filterProperties = (req, res)=>{
+    const { name, location, price, minPrice, maxPrice } = req.query; // Récupération des paramètres
+    // console.log(name);
+    
+    // Construire la requête SQL dynamiquement
+    let query = `SELECT * FROM properties WHERE 1=1`;
+    const params = [];
+
+    if(name){
+        query += ` AND name LIKE ?`;
+        params.push( `%${name}%`); // Utiliser le LIKE pour une recherche partielle
+
+    }
+
+    if(location){
+        query += ` AND location LIKE ?`;
+        params.push(`%${location}%`);
+    }
+
+    if(minPrice){
+        query += ` AND price <= ?`;
+        params.push(minPrice);
+    }
+
+
+    db.all(query, params, (err, rows)=>{
+        if(err){
+            res.status(500).json({ error: "Erreur " + err.message })
+        }else{
+            res.status(200).json(rows);
+        }
+    })
+
+    
+    
+
+}
+

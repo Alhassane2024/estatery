@@ -45,12 +45,10 @@ btnControls.forEach(btn => {
     })
 })
 
-// WORK WITH API 
-// fetch("/api/properties/all") 
-// .then(response => response.json())
-// .then(data => {console.log(data);
-// })
 
+
+
+// WORK WITH API 
 async function fetchProperties(){
     try {
         const response = await fetch("/api/properties/allproperties");
@@ -82,7 +80,7 @@ function displayProperties(properties){
     
                         <div class="price-and-favourite-icon-container">
     
-                            <p class="property-price title-large">$2,095 / month</p>
+                            <p class="property-price title-large">$${property.price} / month</p>
                             <ion-icon name="heart-outline"  class="heart-icon" aria-hidden="true" ></ion-icon>
                         </div>
       
@@ -122,6 +120,46 @@ function displayProperties(properties){
 }
 
 document.addEventListener("DOMContentLoaded", fetchProperties);
+
+
+
+// WORK WITH API ADD FORMULAIRE
+const addPropertyForm = document.getElementById("uploadForm");
+const popUp = document.getElementById("popup");
+
+addPropertyForm.addEventListener("submit", async(e)=>{
+
+    e.preventDefault();
+
+    const formDatas = new FormData(addPropertyForm);
+
+    try {
+        const response = await fetch("/api/properties/upload", {
+            method: "POST",
+            body: formDatas
+        });
+        if(response.ok){
+            popUp.style.display = "block";
+            setTimeout(()=>{
+                popUp.style.display = "none";
+                window.location.href = "/"
+            }, 3000);
+            addPropertyForm.reset();
+        }else{
+            popUp.style.display = "block";
+            popUp.style.backgroundColor = "red";
+            setTimeout(()=>{
+                popUp.style.display = "none";
+            }, 3000);
+            addPropertyForm.reset();
+        }
+    } catch (error) {
+        console.error("ERREUR : ", error);
+    }
+
+});
+
+
 
 
 

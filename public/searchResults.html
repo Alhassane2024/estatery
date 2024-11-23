@@ -15,7 +15,7 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-    <script src="index.js" defer></script>
+    <script src="result.js" defer></script>
 
     <title>Estatery</title>
 </head>
@@ -36,7 +36,7 @@
 
                 <ul class="navbar-list">
                     <li>
-                        <a href="/filterproperties" class="navbar-link link-style">Rent</a>
+                        <a href="#" class="navbar-link link-style">Rent</a>
                     </li>
 
                     <li>
@@ -81,182 +81,13 @@
      <!-- -------------------------
         #HERO SECTION  
     ------------------------------->
-    <section class="hero">
-
-        <div class="container">
-
-            <div class="headline-hero-container">
-                <h2 class="hero-title headline-large">Buy, rent, or sell your property easily</h2>
-
-                <h3 class="hero-subtitle headline-small">A great platform to buy, sell, or even rent your properties without any commisions.</h3>    
-            </div>
-            <form action="/filterproperties "class="rent-buy-sell-form" id="searchForm" method="get">
-
-                <div class="form-container">
-
-                    <div class="label-header-container">
-                        <span class="tab-button active title-medium" data-tab="rent"> Rent</span>
-                        <span class="tab-button title-medium" data-tab="buy"> Buy</span>
-                        <span class="tab-button title-medium" data-tab="sell"> Sell</span>
-                    </div>
-
-                    <div  class="tab-content active" id="rent">
-                        
-                        <input type="text" name="minPrice" placeholder="Search location" class="search-item-field body-one-rem">
-
-                        <button type="submit" class="icon-search" name="search-outline" style="cursor: pointer;">Search</button>
-                    </div>
-
-                    <div  class="tab-content " id="buy">
-                        
-                        <input type="text" name="rent" placeholder="Search for buy" class="search-item-field body-one-rem">
-
-                        <ion-icon class="icon-search" name="search-outline"></ion-icon>
-                    </div>
-
-                    <div  class="tab-content " id="sell">
-                        
-                        <input type="text" name="rent" placeholder="Search for sell" class="search-item-field body-one-rem">
-
-                        <ion-icon class="icon-search" name="search-outline"></ion-icon>
-                    </div>
-
-                </div>
-            </form>
-
-            <div class="hero-stats">
-
-                <div class="stats-container">
-
-                    <img src="./assets/Icon-renters.png" alt="icon" width="64" height="64">
-                    
-                    <div class="stats-text-wrapper">
-                        <h3 class="stat-title body-one-rem">50k+ renters</h3>
-                        <p class="stat-desc">believe in our service</p>
-                    </div>
-
-                </div>
-
-                <div class="stats-none-on-mobile stats-container">
-
-                    <img src="./assets/Icon-renters.png" alt="icon" width="64" height="64">
-                    
-                    <div class="stats-text-wrapper">
-                        <h3 class="stat-title body-one-rem">50k+ renters</h3>
-                        <p class="stat-desc">believe in our service</p>
-                    </div>
-
-                </div>
-
-                <div class="stats-container">
-
-                    <img src="./assets/Icon-search-properties.png" alt="icon" width="64" height="64">
-                    <div class="stats-text-wrapper">
-                        <h3 class="stat-title  body-one-rem"">10k+ properties</h3>
-                        <p class="stat-desc">ready for occupancy</p>
-                    </div>
-
-                </div>
-            </div>
-
-            
-        </div>
-        <div class="map-container">
-
-            <img src="./assets/Property.png" alt="property hero" width="280" height="280">
-
-            <div class="rigth-items-container">
-
-                <div class="rigth-top-items-container">
-                    <div class="road-map-container">
-                        <img src="./assets/Group 13639.png" alt="">
-                        <img src="./assets/Vector 10.png" alt="" >
-                        <img src="./assets/Group.png" alt="">
-                    </div>
-                    <img src="./assets/tapon-bar-min.png" alt="" width="150" height="200">
-                </div>
-            </div>
-
-        </div>
-    </section>
+    
 
 
     <!-- -------------------------
         #BENEFIT SECTION  
     ------------------------------->
-     <section class="benefit">
-
-        <div class="benefit-container">
-
-            <div class="illustration-container">
-
-                <div class="header-text-benefit-and-btn">
-
-                    <div class="header-text-benefit">
-
-                        <h2 class="benefit-title headline-medium">The new way to find your new home</h2>
-                        <p class="benefit-subtitle body-one-rem">Find your dream place to live in with more than 10k+ properties listed.</p>
-                    </div>
-
-                    <a href="#" class="btn btn-fill label-medium">Browse Properties</a>
-
-                </div>
-
-                <div class="illustration-image-container">
-                    <img class="illustration-image" src="./assets/Illustration-image.png" alt="illsutration image" >
-                </div>
-
-                
-            </div>
-
-            <div class="four-benefit-container">
-
-                <div class="benefit-item">
-
-                    <img src="./assets/Icon-insurance.png" alt="">
-
-                    <div class="benefit-item-text">
-                        <h3 class="benefit-item-title title-large">Property Insurance</h3>
-                        <p class="body-one-rem">We offer our customer property protection of liability coverage and insurance for their better life.</p>
-                    </div>
-
-                </div>
-
-                <div class="benefit-item">
-
-                    <img src="./assets/Icon-best-price.png" alt="">
-
-                    <div class="benefit-item-text">
-                        <h3 class="benefit-item-title title-large">Best Price</h3>
-                        <p class="body-one-rem">Not sure what  you should be charging for your property? No need to worry, let us do the numbers for you.</p>
-                    </div>
-
-                </div>
-
-                <div class="benefit-item">
-
-                    <img src="./assets/Icon-lowest-comission.png" alt="">
-
-                    <div class="benefit-item-text">
-                        <h3 class="benefit-item-title title-large">Lowest Commission</h3>
-                        <p class="body-one-rem">You no longer have to negotiate commissions and haggle with other agents it only cost 2%!</p>
-                    </div>
-
-                </div>
-
-                <div class="benefit-item">
-
-                    <img src="./assets/Icon-overall-control.png" alt="">
-
-                    <div class="benefit-item-text">
-                        <h3 class="benefit-item-title title-large">Overall Control</h3>
-                        <p class="body-one-rem">Get a virtual tour, and schedule visits before you rent or buy any properties. You get overall control.</p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-     </section>
+    
 
 
       <!-- -------------------------
@@ -312,7 +143,7 @@
 
             <div class="property-list-tab-icon-container">
 
-                <div class="property-list" id="property-list">
+                <div class="property-list" id="filtered-properties">
     
                     <div class="property-card">
                       <img src="./assets/palm-harbor.png" alt="Property 1">
@@ -505,116 +336,19 @@
             </div>
 
         </div>
-    </section>
+    </section> 
 
 
     <!-- -------------------------
     #FOR TENANTS & LANDLORDS SECTION  
     ------------------------------->
-    <section class="property-listings">
-
-        <div class="tenants-landlords property-listings-container">
-
-            <div class="headline-property-listings-container">
-
-                <h2 class="benefit-title property-listings-title headline-medium headline-tenants-landlords-res" style="color: white;">We make it easy for <span class="span-tenants-landlords-style">tenants</span> and <span class="span-tenants-landlords-style">landlords.</span></h2>
-                
-                <p class="benefit-subtitle property-listings-subtitle body-one-rem" style="color: white;">Whether it’s selling your current home, getting financing, or buying a new home, we make it easy  and efficient. The best part? you’ll save a bunch of money and time with our services.</p>
-
-            </div>
-
-            <div class="card-tenants-landlords-container">
-
-                <div class="card virtual-home-tour">
-
-                    <img src="./assets/icon-virtual-home-tour.svg" alt="" width="56" height="56">
-
-                    <div class="text-card-tenants-landords-container">
-
-                        <h2 class="title-large" style="color: white;">Virtual home tour</h2>
-                        <p class="tenants-landlords-subtitle" style="color: rgba(255, 255, 255, 0.752); ">You can communicate directly with landlords and we provide you with virtual tour before you buy or rent the property.</p>
-                    </div>
-
-                </div>
-
-                <div class="card find-the-best-deal">
-
-                    <img src="./assets/icon-find-the-best-deal.svg" alt="" width="56" height="56">
-
-                    <div class="text-card-tenants-landords-container">
-
-                        <h2 class="title-large">Find the best deal</h2>
-                        <p class="tenants-landlords-subtitle">Browse thousands of properties, save your favorites and set up search alerts so you don’t miss the best home deal!</p>
-                    </div>
-
-                </div>
-
-                <div class="card get-ready-to-apply">
-
-                    <img src="./assets/icon-get-ready-to-apply.svg" alt="" width="56" height="56">
-
-                    <div class="text-card-tenants-landords-container">
-
-                        <h2 class="title-large" style="color: white;">Get ready to apply</h2>
-                        <p class="tenants-landlords-subtitle" style="color: rgba(255, 255, 255, 0.752); ">Find your dream house? You just need to do a little to no effort and you can start move in to your new dream home!</p>
-                    </div>
-
-                </div>
-            </div>
-
-            <hr style="border-color: #312F4B;">
-
-            <div class="stats-tenants-landlords">
-
-                <div class="text-stats-container">
-
-                    <h1 class="headline-large">7.4%</h1>
-                    <p class="subtitle-stats body-one-rem">Property Return Rate</p>
-                </div>
-
-                <hr style="width: 64px;">
-
-                <div class="text-stats-container">
-
-                    <h1 class="headline-large">3,856</h1>
-                    <p class="subtitle-stats body-one-rem">Property in Sell & Rent</p>
-                </div>
-
-                <hr style="width: 64px;">
-
-                <div class="text-stats-container">
-
-                    <h1 class="headline-large">2,540</h1>
-                    <p class="subtitle-stats body-one-rem">Daily Completed Transactions</p>
-                </div>
-
-            </div>
-   
-        </div>
-    </section>
+ 
 
 
     <!-- -------------------------
         #CTA SECTION  
     ------------------------------->
-    <section class="cta">
-
-        <div class="cta-container">
-
-            <div class="text-cta-header-container">
-
-                <h3 style="color: #7065F0;">No Spam Promise</h3>
-                <h2 class="benefit-title property-listings-title" style="font-size: 24px;">Are you a landlord?</h2>
-                <p class="benefit-subtitle property-listings-subtitle body-one-rem">Discover ways to increase your home's value and  get listed. No Spam.</p>
-            </div>
-            <div class="input-and-submit-button-container">
-
-                <input type="text" name="rent" placeholder="Enter your email address" class="cta-input search-item-field body-one-rem">
-                <a href="#" class="btn btn-fill-login label-medium" style="text-align: center;">Submit</a>
-                <p class="benefit-subtitle property-listings-subtitle body-one-rem">Join <span class="span-tenants-landlords-style">10,000+</span> other landlords in our estatery community.</p>
-            </div>
-        </div>
-    </section>
+   
 
 
     <!-- -------------------------
